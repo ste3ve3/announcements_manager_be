@@ -9,7 +9,6 @@ COPY . ./
 FROM node:21-alpine3.17
 WORKDIR /app
 COPY --from=build /app ./
-COPY .env ./
 
 EXPOSE 5000
 CMD ["npm", "start"]
